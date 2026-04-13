@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Framing Security Demo</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script src="/assets/app.js" defer></script>
+  </head>
+  <body data-page="home">
+    <main class="layout">
+      <section class="hero">
+        <p class="eyebrow">Clickjacking Defense Lab</p>
+        <h1>X-Frame-Options и CSP frame-ancestors</h1>
+        <p class="lede">
+          Стенд поднимает несколько origins и показывает разницу между
+          <code>DENY</code>, <code>SAMEORIGIN</code>, <code>ALLOW-FROM</code> и
+          <code>frame-ancestors</code>.
+        </p>
+        <div class="chip-row">
+          <span class="chip">Текущий origin: <span data-current-origin></span></span>
+          <span class="chip">Текущая роль: <span data-current-role></span></span>
+        </div>
+        <div class="origin-switch">
+          <a class="button-link accent" data-role-link="app" data-path="/tests/xfo-lab.html">XFO same-origin</a>
+          <a class="button-link" data-role-link="trusted" data-path="/tests/xfo-lab.html">XFO trusted</a>
+          <a class="button-link" data-role-link="attacker" data-path="/tests/xfo-lab.html">XFO attacker</a>
+          <a class="button-link" data-role-link="app" data-path="/tests/csp-lab.html">CSP same-origin</a>
+        </div>
+      </section>
+
+      <section class="grid two">
+        <article class="card">
+          <p class="eyebrow">X-Frame-Options</p>
+          <h2>Три сценария</h2>
+          <ul class="feature-list">
+            <li><code>/xfo/admin-panel.html</code> — <code>DENY</code></li>
+            <li><code>/xfo/public-widget.html</code> — <code>SAMEORIGIN</code></li>
+            <li><code>/xfo/partner-widget.html</code> — <code>ALLOW-FROM</code></li>
+          </ul>
+          <p class="note">
+            В локальной демонстрации trusted partner origin:
+            <code data-xfo-allow-from-origin></code>. Production-цель:
+            <code data-production-partner-origin></code>.
+          </p>
+        </article>
+
+        <article class="card">
+          <p class="eyebrow">CSP frame-ancestors</p>
+          <h2>Расширенная политика</h2>
+          <ul class="feature-list">
+            <li><code>/csp/secure-dashboard.html</code> — <code>'none'</code></li>
+            <li><code>/csp/embedded-content.html</code> — несколько доверенных origins</li>
+            <li><code>/csp/self-embedded.html</code> — <code>'self'</code></li>
+          </ul>
+          <ul class="policy-list" data-csp-trusted-origins></ul>
+        </article>
+      </section>
+
+      <section class="grid four">
+        <article class="card">
+          <p class="eyebrow">Origin A</p>
+          <h3>Main app</h3>
+          <div class="origin-switch">
+            <a data-role-link="app" data-path="/tests/xfo-lab.html">XFO</a>
+            <a data-role-link="app" data-path="/tests/csp-lab.html">CSP</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <p class="eyebrow">Origin B</p>
+          <h3>Trusted partner</h3>
+          <div class="origin-switch">
+            <a data-role-link="trusted" data-path="/tests/xfo-lab.html">XFO</a>
+            <a data-role-link="trusted" data-path="/tests/csp-lab.html">CSP</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <p class="eyebrow">Origin C</p>
+          <h3>Attacker</h3>
+          <div class="origin-switch">
+            <a data-role-link="attacker" data-path="/tests/xfo-lab.html">XFO</a>
+            <a data-role-link="attacker" data-path="/tests/csp-lab.html">CSP</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <p class="eyebrow">Origin D</p>
+          <h3>Secondary trusted</h3>
+          <div class="origin-switch">
+            <a data-role-link="review" data-path="/tests/xfo-lab.html">XFO</a>
+            <a data-role-link="review" data-path="/tests/csp-lab.html">CSP</a>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
