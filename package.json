@@ -1,0 +1,11 @@
+{
+  "name": "framing-security-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Demo app for X-Frame-Options and CSP frame-ancestors",
+  "scripts": {
+    "start": "node server.js",
+    "test:browsers": "node scripts/run-headless-tests.js",
+    "test:browsers:gui": "node scripts/run-browser-tests.js"
+  }
+}

@@ -1,0 +1,898 @@
+{
+  "generatedAt": "2026-04-13T09:26:15.359Z",
+  "results": [
+    {
+      "browser": "chrome",
+      "suite": "xfo",
+      "role": "app",
+      "origin": "http://localhost:8080",
+      "finishedAt": "2026-04-13T09:22:42.743Z",
+      "scenarios": [
+        {
+          "pageId": "admin-panel",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "public-widget",
+          "expected": "allowed",
+          "actual": "allowed",
+          "passed": true
+        },
+        {
+          "pageId": "partner-widget",
+          "expected": "blocked",
+          "actual": "allowed",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "browser": "chrome",
+      "suite": "xfo",
+      "role": "trusted",
+      "origin": "http://localhost:8081",
+      "finishedAt": "2026-04-13T09:22:51.080Z",
+      "scenarios": [
+        {
+          "pageId": "admin-panel",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "public-widget",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "partner-widget",
+          "expected": "allowed",
+          "actual": "allowed",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "browser": "chrome",
+      "suite": "xfo",
+      "role": "attacker",
+      "origin": "http://localhost:8082",
+      "finishedAt": "2026-04-13T09:23:00.042Z",
+      "scenarios": [
+        {
+          "pageId": "admin-panel",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "public-widget",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "partner-widget",
+          "expected": "blocked",
+          "actual": "allowed",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "browser": "chrome",
+      "suite": "xfo",
+      "role": "review",
+      "origin": "http://localhost:8083",
+      "finishedAt": "2026-04-13T09:23:08.985Z",
+      "scenarios": [
+        {
+          "pageId": "admin-panel",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "public-widget",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "partner-widget",
+          "expected": "blocked",
+          "actual": "allowed",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "browser": "chrome",
+      "suite": "csp",
+      "role": "app",
+      "origin": "http://localhost:8080",
+      "finishedAt": "2026-04-13T09:23:18.750Z",
+      "scenarios": [
+        {
+          "pageId": "secure-dashboard",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "embedded-content",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "self-embedded",
+          "expected": "allowed",
+          "actual": "allowed",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "browser": "chrome",
+      "suite": "csp",
+      "role": "trusted",
+      "origin": "http://localhost:8081",
+      "finishedAt": "2026-04-13T09:23:27.752Z",
+      "scenarios": [
+        {
+          "pageId": "secure-dashboard",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "embedded-content",
+          "expected": "allowed",
+          "actual": "allowed",
+          "passed": true
+        },
+        {
+          "pageId": "self-embedded",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "browser": "chrome",
+      "suite": "csp",
+      "role": "attacker",
+      "origin": "http://localhost:8082",
+      "finishedAt": "2026-04-13T09:23:36.747Z",
+      "scenarios": [
+        {
+          "pageId": "secure-dashboard",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "embedded-content",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "self-embedded",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "browser": "chrome",
+      "suite": "csp",
+      "role": "review",
+      "origin": "http://localhost:8083",
+      "finishedAt": "2026-04-13T09:23:44.967Z",
+      "scenarios": [
+        {
+          "pageId": "secure-dashboard",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "embedded-content",
+          "expected": "allowed",
+          "actual": "allowed",
+          "passed": true
+        },
+        {
+          "pageId": "self-embedded",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "suite": "xfo",
+      "role": "app",
+      "origin": "http://localhost:8080",
+      "finishedAt": "2026-04-13T09:23:55.128Z",
+      "scenarios": [
+        {
+          "pageId": "admin-panel",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "public-widget",
+          "expected": "allowed",
+          "actual": "allowed",
+          "passed": true
+        },
+        {
+          "pageId": "partner-widget",
+          "expected": "blocked",
+          "actual": "allowed",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "suite": "xfo",
+      "role": "trusted",
+      "origin": "http://localhost:8081",
+      "finishedAt": "2026-04-13T09:24:03.997Z",
+      "scenarios": [
+        {
+          "pageId": "admin-panel",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "public-widget",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "partner-widget",
+          "expected": "allowed",
+          "actual": "allowed",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "suite": "xfo",
+      "role": "attacker",
+      "origin": "http://localhost:8082",
+      "finishedAt": "2026-04-13T09:24:12.973Z",
+      "scenarios": [
+        {
+          "pageId": "admin-panel",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "public-widget",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "partner-widget",
+          "expected": "blocked",
+          "actual": "allowed",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "suite": "xfo",
+      "role": "review",
+      "origin": "http://localhost:8083",
+      "finishedAt": "2026-04-13T09:24:21.914Z",
+      "scenarios": [
+        {
+          "pageId": "admin-panel",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "public-widget",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "partner-widget",
+          "expected": "blocked",
+          "actual": "allowed",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "suite": "csp",
+      "role": "app",
+      "origin": "http://localhost:8080",
+      "finishedAt": "2026-04-13T09:24:30.845Z",
+      "scenarios": [
+        {
+          "pageId": "secure-dashboard",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "embedded-content",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "self-embedded",
+          "expected": "allowed",
+          "actual": "allowed",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "suite": "csp",
+      "role": "trusted",
+      "origin": "http://localhost:8081",
+      "finishedAt": "2026-04-13T09:24:39.754Z",
+      "scenarios": [
+        {
+          "pageId": "secure-dashboard",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "embedded-content",
+          "expected": "allowed",
+          "actual": "allowed",
+          "passed": true
+        },
+        {
+          "pageId": "self-embedded",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "suite": "csp",
+      "role": "attacker",
+      "origin": "http://localhost:8082",
+      "finishedAt": "2026-04-13T09:24:48.979Z",
+      "scenarios": [
+        {
+          "pageId": "secure-dashboard",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "embedded-content",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "self-embedded",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "suite": "csp",
+      "role": "review",
+      "origin": "http://localhost:8083",
+      "finishedAt": "2026-04-13T09:24:57.665Z",
+      "scenarios": [
+        {
+          "pageId": "secure-dashboard",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "embedded-content",
+          "expected": "allowed",
+          "actual": "allowed",
+          "passed": true
+        },
+        {
+          "pageId": "self-embedded",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "browser": "edge",
+      "suite": "xfo",
+      "role": "app",
+      "origin": "http://localhost:8080",
+      "finishedAt": "2026-04-13T09:25:05.670Z",
+      "scenarios": [
+        {
+          "pageId": "admin-panel",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "public-widget",
+          "expected": "allowed",
+          "actual": "allowed",
+          "passed": true
+        },
+        {
+          "pageId": "partner-widget",
+          "expected": "blocked",
+          "actual": "allowed",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "browser": "edge",
+      "suite": "xfo",
+      "role": "trusted",
+      "origin": "http://localhost:8081",
+      "finishedAt": "2026-04-13T09:25:15.731Z",
+      "scenarios": [
+        {
+          "pageId": "admin-panel",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "public-widget",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "partner-widget",
+          "expected": "allowed",
+          "actual": "allowed",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "browser": "edge",
+      "suite": "xfo",
+      "role": "attacker",
+      "origin": "http://localhost:8082",
+      "finishedAt": "2026-04-13T09:25:23.810Z",
+      "scenarios": [
+        {
+          "pageId": "admin-panel",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "public-widget",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "partner-widget",
+          "expected": "blocked",
+          "actual": "allowed",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "browser": "edge",
+      "suite": "xfo",
+      "role": "review",
+      "origin": "http://localhost:8083",
+      "finishedAt": "2026-04-13T09:25:32.923Z",
+      "scenarios": [
+        {
+          "pageId": "admin-panel",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "public-widget",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "partner-widget",
+          "expected": "blocked",
+          "actual": "allowed",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "browser": "edge",
+      "suite": "csp",
+      "role": "app",
+      "origin": "http://localhost:8080",
+      "finishedAt": "2026-04-13T09:25:42.728Z",
+      "scenarios": [
+        {
+          "pageId": "secure-dashboard",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "embedded-content",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "self-embedded",
+          "expected": "allowed",
+          "actual": "allowed",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "browser": "edge",
+      "suite": "csp",
+      "role": "trusted",
+      "origin": "http://localhost:8081",
+      "finishedAt": "2026-04-13T09:25:50.905Z",
+      "scenarios": [
+        {
+          "pageId": "secure-dashboard",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "embedded-content",
+          "expected": "allowed",
+          "actual": "allowed",
+          "passed": true
+        },
+        {
+          "pageId": "self-embedded",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "browser": "edge",
+      "suite": "csp",
+      "role": "attacker",
+      "origin": "http://localhost:8082",
+      "finishedAt": "2026-04-13T09:26:00.735Z",
+      "scenarios": [
+        {
+          "pageId": "secure-dashboard",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "embedded-content",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "self-embedded",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "browser": "edge",
+      "suite": "csp",
+      "role": "review",
+      "origin": "http://localhost:8083",
+      "finishedAt": "2026-04-13T09:26:09.726Z",
+      "scenarios": [
+        {
+          "pageId": "secure-dashboard",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        },
+        {
+          "pageId": "embedded-content",
+          "expected": "allowed",
+          "actual": "allowed",
+          "passed": true
+        },
+        {
+          "pageId": "self-embedded",
+          "expected": "blocked",
+          "actual": "blocked",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "browser": "chrome",
+      "suite": "xfo",
+      "role": "app",
+      "passed": 2,
+      "total": 3
+    },
+    {
+      "browser": "chrome",
+      "suite": "xfo",
+      "role": "trusted",
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "browser": "chrome",
+      "suite": "xfo",
+      "role": "attacker",
+      "passed": 2,
+      "total": 3
+    },
+    {
+      "browser": "chrome",
+      "suite": "xfo",
+      "role": "review",
+      "passed": 2,
+      "total": 3
+    },
+    {
+      "browser": "chrome",
+      "suite": "csp",
+      "role": "app",
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "browser": "chrome",
+      "suite": "csp",
+      "role": "trusted",
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "browser": "chrome",
+      "suite": "csp",
+      "role": "attacker",
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "browser": "chrome",
+      "suite": "csp",
+      "role": "review",
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "browser": "firefox",
+      "suite": "xfo",
+      "role": "app",
+      "passed": 2,
+      "total": 3
+    },
+    {
+      "browser": "firefox",
+      "suite": "xfo",
+      "role": "trusted",
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "browser": "firefox",
+      "suite": "xfo",
+      "role": "attacker",
+      "passed": 2,
+      "total": 3
+    },
+    {
+      "browser": "firefox",
+      "suite": "xfo",
+      "role": "review",
+      "passed": 2,
+      "total": 3
+    },
+    {
+      "browser": "firefox",
+      "suite": "csp",
+      "role": "app",
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "browser": "firefox",
+      "suite": "csp",
+      "role": "trusted",
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "browser": "firefox",
+      "suite": "csp",
+      "role": "attacker",
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "browser": "firefox",
+      "suite": "csp",
+      "role": "review",
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "browser": "edge",
+      "suite": "xfo",
+      "role": "app",
+      "passed": 2,
+      "total": 3
+    },
+    {
+      "browser": "edge",
+      "suite": "xfo",
+      "role": "trusted",
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "browser": "edge",
+      "suite": "xfo",
+      "role": "attacker",
+      "passed": 2,
+      "total": 3
+    },
+    {
+      "browser": "edge",
+      "suite": "xfo",
+      "role": "review",
+      "passed": 2,
+      "total": 3
+    },
+    {
+      "browser": "edge",
+      "suite": "csp",
+      "role": "app",
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "browser": "edge",
+      "suite": "csp",
+      "role": "trusted",
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "browser": "edge",
+      "suite": "csp",
+      "role": "attacker",
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "browser": "edge",
+      "suite": "csp",
+      "role": "review",
+      "passed": 3,
+      "total": 3
+    }
+  ],
+  "failures": [
+    {
+      "browser": "chrome",
+      "suite": "xfo",
+      "role": "app",
+      "pageId": "partner-widget",
+      "expected": "blocked",
+      "actual": "allowed"
+    },
+    {
+      "browser": "chrome",
+      "suite": "xfo",
+      "role": "attacker",
+      "pageId": "partner-widget",
+      "expected": "blocked",
+      "actual": "allowed"
+    },
+    {
+      "browser": "chrome",
+      "suite": "xfo",
+      "role": "review",
+      "pageId": "partner-widget",
+      "expected": "blocked",
+      "actual": "allowed"
+    },
+    {
+      "browser": "firefox",
+      "suite": "xfo",
+      "role": "app",
+      "pageId": "partner-widget",
+      "expected": "blocked",
+      "actual": "allowed"
+    },
+    {
+      "browser": "firefox",
+      "suite": "xfo",
+      "role": "attacker",
+      "pageId": "partner-widget",
+      "expected": "blocked",
+      "actual": "allowed"
+    },
+    {
+      "browser": "firefox",
+      "suite": "xfo",
+      "role": "review",
+      "pageId": "partner-widget",
+      "expected": "blocked",
+      "actual": "allowed"
+    },
+    {
+      "browser": "edge",
+      "suite": "xfo",
+      "role": "app",
+      "pageId": "partner-widget",
+      "expected": "blocked",
+      "actual": "allowed"
+    },
+    {
+      "browser": "edge",
+      "suite": "xfo",
+      "role": "attacker",
+      "pageId": "partner-widget",
+      "expected": "blocked",
+      "actual": "allowed"
+    },
+    {
+      "browser": "edge",
+      "suite": "xfo",
+      "role": "review",
+      "pageId": "partner-widget",
+      "expected": "blocked",
+      "actual": "allowed"
+    }
+  ],
+  "issues": []
+}
