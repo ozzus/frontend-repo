@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSP Frame Ancestors Lab</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script src="/assets/app.js" defer></script>
+  </head>
+  <body data-page="test-harness" data-suite="csp">
+    <main class="layout">
+      <section class="hero">
+        <p class="eyebrow">CSP Harness</p>
+        <h1>Проверка frame-ancestors</h1>
+        <p class="lede">
+          Проверяются три режима: <code>'none'</code>, список доверенных origins и <code>'self'</code>.
+        </p>
+        <div class="chip-row">
+          <span class="chip">Текущий origin: <span data-current-origin></span></span>
+          <span class="chip">Текущая роль: <span data-current-role></span></span>
+        </div>
+        <ul class="policy-list" data-csp-trusted-origins></ul>
+        <div class="origin-switch">
+          <a class="button-link" href="/">На главную</a>
+          <a class="button-link accent" data-role-link="app" data-path="/tests/csp-lab.html">same-origin</a>
+          <a class="button-link" data-role-link="trusted" data-path="/tests/csp-lab.html">trusted</a>
+          <a class="button-link" data-role-link="attacker" data-path="/tests/csp-lab.html">attacker</a>
+          <a class="button-link" data-role-link="review" data-path="/tests/csp-lab.html">secondary</a>
+        </div>
+        <div class="summary-bar">
+          <span class="summary-pill">Всего: <span data-summary-total>3</span></span>
+          <span class="summary-pill success">PASS: <span data-summary-pass>0</span></span>
+          <span class="summary-pill fail">FAIL: <span data-summary-fail>0</span></span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="test-card" data-test-card data-page-id="secure-dashboard" data-target-path="/csp/secure-dashboard.html" data-expected-app="blocked" data-expected-trusted="blocked" data-expected-attacker="blocked" data-expected-review="blocked">
+          <div>
+            <p class="eyebrow">Scenario D</p>
+            <h2>secure-dashboard.html</h2>
+            <p class="caption">Полный запрет через <code>frame-ancestors 'none'</code>.</p>
+            <p class="status-line" data-status></p>
+          </div>
+          <iframe title="secure-dashboard probe" loading="eager"></iframe>
+        </article>
+
+        <article class="test-card" data-test-card data-page-id="embedded-content" data-target-path="/csp/embedded-content.html" data-expected-app="blocked" data-expected-trusted="allowed" data-expected-attacker="blocked" data-expected-review="allowed">
+          <div>
+            <p class="eyebrow">Scenario E</p>
+            <h2>embedded-content.html</h2>
+            <p class="caption">Разрешены только trusted partner и secondary trusted.</p>
+            <p class="status-line" data-status></p>
+          </div>
+          <iframe title="embedded-content probe" loading="eager"></iframe>
+        </article>
+
+        <article class="test-card" data-test-card data-page-id="self-embedded" data-target-path="/csp/self-embedded.html" data-expected-app="allowed" data-expected-trusted="blocked" data-expected-attacker="blocked" data-expected-review="blocked">
+          <div>
+            <p class="eyebrow">Scenario F</p>
+            <h2>self-embedded.html</h2>
+            <p class="caption">Разрешение только для того же origin.</p>
+            <p class="status-line" data-status></p>
+          </div>
+          <iframe title="self-embedded probe" loading="eager"></iframe>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Embedded Content</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script src="/assets/frame-page.js" defer></script>
+  </head>
+  <body data-page-id="embedded-content" data-suite="csp" class="frame-shell">
+    <main class="frame-panel widget">
+      <p class="eyebrow">CSP: trusted frame ancestors</p>
+      <h1>Embeddable Sales Content</h1>
+      <p class="lede">
+        Встраивание разрешено только нескольким доверенным origins.
+      </p>
+      <ul class="policy-list" data-csp-trusted-origins></ul>
+      <div class="meta-grid">
+        <section class="meta-item">
+          <span class="meta-label">Маршрут</span>
+          <span class="meta-value" data-current-path></span>
+        </section>
+        <section class="meta-item">
+          <span class="meta-label">Origin</span>
+          <span class="meta-value" data-current-origin></span>
+        </section>
+        <section class="meta-item">
+          <span class="meta-label">Audience</span>
+          <span class="meta-value">Partners + review portal</span>
+        </section>
+        <section class="meta-item">
+          <span class="meta-label">Policy goal</span>
+          <span class="meta-value">Controlled federation</span>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

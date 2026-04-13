@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Self Embedded</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script src="/assets/frame-page.js" defer></script>
+  </head>
+  <body data-page-id="self-embedded" data-suite="csp" class="frame-shell">
+    <main class="frame-panel partner">
+      <p class="eyebrow">CSP: frame-ancestors 'self'</p>
+      <h1>Internal Embedded Experience</h1>
+      <p class="lede">
+        Эта страница разрешает встраивание только с того же origin.
+      </p>
+      <div class="meta-grid">
+        <section class="meta-item">
+          <span class="meta-label">Маршрут</span>
+          <span class="meta-value" data-current-path></span>
+        </section>
+        <section class="meta-item">
+          <span class="meta-label">Origin</span>
+          <span class="meta-value" data-current-origin></span>
+        </section>
+        <section class="meta-item">
+          <span class="meta-label">Policy</span>
+          <span class="meta-value">Only same-site portal widgets</span>
+        </section>
+        <section class="meta-item">
+          <span class="meta-label">Upgrade path</span>
+          <span class="meta-value">Replace XFO SAMEORIGIN</span>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

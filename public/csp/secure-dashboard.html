@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Secure Dashboard</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script src="/assets/frame-page.js" defer></script>
+  </head>
+  <body data-page-id="secure-dashboard" data-suite="csp" class="frame-shell">
+    <main class="frame-panel dashboard">
+      <p class="eyebrow">CSP: frame-ancestors 'none'</p>
+      <h1>Secure Operations Dashboard</h1>
+      <p class="lede">
+        Современный полный запрет встраивания: ни один родительский документ не должен
+        получить эту страницу через <code>iframe</code>.
+      </p>
+      <div class="frame-grid">
+        <section class="metric">
+          <span class="meta-label">High priority alerts</span>
+          <strong>3</strong>
+        </section>
+        <section class="metric">
+          <span class="meta-label">Risk score</span>
+          <strong>91 / 100</strong>
+        </section>
+        <section class="metric">
+          <span class="meta-label">Last rotation</span>
+          <strong>14 min ago</strong>
+        </section>
+      </div>
+      <div class="meta-grid">
+        <section class="meta-item">
+          <span class="meta-label">Маршрут</span>
+          <span class="meta-value" data-current-path></span>
+        </section>
+        <section class="meta-item">
+          <span class="meta-label">Origin</span>
+          <span class="meta-value" data-current-origin></span>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

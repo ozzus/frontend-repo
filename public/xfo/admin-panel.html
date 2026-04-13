@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script src="/assets/frame-page.js" defer></script>
+  </head>
+  <body data-page-id="admin-panel" data-suite="xfo" class="frame-shell">
+    <main class="frame-panel admin">
+      <p class="eyebrow">X-Frame-Options: DENY</p>
+      <h1>Secure Admin Panel</h1>
+      <p class="lede">
+        Эта страница полностью запрещает встраивание в <code>iframe</code> для любого origin.
+      </p>
+      <div class="frame-grid">
+        <section class="metric">
+          <span class="meta-label">Open incidents</span>
+          <strong>07</strong>
+        </section>
+        <section class="metric">
+          <span class="meta-label">Privileged actions</span>
+          <strong>142</strong>
+        </section>
+        <section class="metric">
+          <span class="meta-label">MFA drift</span>
+          <strong>1.4%</strong>
+        </section>
+      </div>
+      <div class="meta-grid">
+        <section class="meta-item">
+          <span class="meta-label">Маршрут</span>
+          <span class="meta-value" data-current-path></span>
+        </section>
+        <section class="meta-item">
+          <span class="meta-label">Origin</span>
+          <span class="meta-value" data-current-origin></span>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

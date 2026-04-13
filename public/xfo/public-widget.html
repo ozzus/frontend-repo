@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Public Widget</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script src="/assets/frame-page.js" defer></script>
+  </head>
+  <body data-page-id="public-widget" data-suite="xfo" class="frame-shell">
+    <main class="frame-panel widget">
+      <p class="eyebrow">X-Frame-Options: SAMEORIGIN</p>
+      <h1>Public Match Widget</h1>
+      <p class="lede">
+        Этот виджет можно встраивать только на том же origin, что и сам документ.
+      </p>
+      <div class="frame-grid">
+        <section class="metric">
+          <span class="meta-label">Route</span>
+          <strong>MOW → LED</strong>
+        </section>
+        <section class="metric">
+          <span class="meta-label">Fare alert</span>
+          <strong>11 240 ₽</strong>
+        </section>
+        <section class="metric">
+          <span class="meta-label">Match day</span>
+          <strong>Sat 20:00</strong>
+        </section>
+      </div>
+      <div class="meta-grid">
+        <section class="meta-item">
+          <span class="meta-label">Маршрут</span>
+          <span class="meta-value" data-current-path></span>
+        </section>
+        <section class="meta-item">
+          <span class="meta-label">Origin</span>
+          <span class="meta-value" data-current-origin></span>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

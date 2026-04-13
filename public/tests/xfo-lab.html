@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>X-Frame-Options Lab</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script src="/assets/app.js" defer></script>
+  </head>
+  <body data-page="test-harness" data-suite="xfo">
+    <main class="layout">
+      <section class="hero">
+        <p class="eyebrow">XFO Harness</p>
+        <h1>Проверка DENY, SAMEORIGIN и ALLOW-FROM</h1>
+        <p class="lede">
+          Итог строится по факту получения <code>postMessage</code> от вложенной страницы.
+        </p>
+        <p class="note">
+          Сценарий с <code>ALLOW-FROM</code> оставлен намеренно как legacy-демонстрация:
+          в современных браузерах он может расходиться с ожидаемым поведением, потому что директива устарела.
+        </p>
+        <div class="chip-row">
+          <span class="chip">Текущий origin: <span data-current-origin></span></span>
+          <span class="chip">Текущая роль: <span data-current-role></span></span>
+          <span class="chip">ALLOW-FROM: <span data-xfo-allow-from-origin></span></span>
+        </div>
+        <div class="origin-switch">
+          <a class="button-link" href="/">На главную</a>
+          <a class="button-link accent" data-role-link="app" data-path="/tests/xfo-lab.html">same-origin</a>
+          <a class="button-link" data-role-link="trusted" data-path="/tests/xfo-lab.html">trusted</a>
+          <a class="button-link" data-role-link="attacker" data-path="/tests/xfo-lab.html">attacker</a>
+          <a class="button-link" data-role-link="review" data-path="/tests/xfo-lab.html">secondary</a>
+        </div>
+        <div class="summary-bar">
+          <span class="summary-pill">Всего: <span data-summary-total>3</span></span>
+          <span class="summary-pill success">PASS: <span data-summary-pass>0</span></span>
+          <span class="summary-pill fail">FAIL: <span data-summary-fail>0</span></span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="test-card" data-test-card data-page-id="admin-panel" data-target-path="/xfo/admin-panel.html" data-expected-app="blocked" data-expected-trusted="blocked" data-expected-attacker="blocked" data-expected-review="blocked">
+          <div>
+            <p class="eyebrow">Scenario A</p>
+            <h2>admin-panel.html</h2>
+            <p class="caption">Должен блокироваться всегда.</p>
+            <p class="status-line" data-status></p>
+          </div>
+          <iframe title="admin-panel probe" loading="eager"></iframe>
+        </article>
+
+        <article class="test-card" data-test-card data-page-id="public-widget" data-target-path="/xfo/public-widget.html" data-expected-app="allowed" data-expected-trusted="blocked" data-expected-attacker="blocked" data-expected-review="blocked">
+          <div>
+            <p class="eyebrow">Scenario B</p>
+            <h2>public-widget.html</h2>
+            <p class="caption">Должен открываться только на same-origin.</p>
+            <p class="status-line" data-status></p>
+          </div>
+          <iframe title="public-widget probe" loading="eager"></iframe>
+        </article>
+
+        <article class="test-card" data-test-card data-page-id="partner-widget" data-target-path="/xfo/partner-widget.html" data-expected-app="blocked" data-expected-trusted="allowed" data-expected-attacker="blocked" data-expected-review="blocked">
+          <div>
+            <p class="eyebrow">Scenario C</p>
+            <h2>partner-widget.html</h2>
+            <p class="caption">Демонстрация <code>ALLOW-FROM</code> для одного доверенного origin.</p>
+            <p class="status-line" data-status></p>
+          </div>
+          <iframe title="partner-widget probe" loading="eager"></iframe>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
